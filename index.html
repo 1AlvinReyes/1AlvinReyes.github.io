@@ -2,55 +2,142 @@
 <html>
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>HACU</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Alvin</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
-  <!--the following code is the navigation bar-->
-  <nav class="navbar navbar-expand-sm nav-border">
-    <a href="#">
-      <img src="logo_hacu.png" alt="Logo" height="75" width="75">
-    </a>
-    <div>
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">About Us</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Join Us</a>
-        </li>
-      </ul>
-    </div>
+
+  <!-- Add your navbar here -->
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="business.html">Business Idea</a></li>
+      <li><a href="bootstrap.html">Ideation</a></li>
+
+    </ul>
   </nav>
-  <!--the following code is the starting screen-->
-  <div class="homepage-container" >
-    <img src="hacu_mainpage.jpg" class="homepage" alt="banner" height=100% width=100% >
-  <div class="homepage-text" >
-    <h1>Happiness Across Cultural Unity</h1>
-    <div><h2> fighting for cultural belonging for all</h2></div> 
-  </div> </div>
-  
-  <!--the following code is of the news section-->
-  <div class="news-container">
-    <h1>Weekly News</h1>
-    <h5>The hidden meaning behind Latin Dancing</h5>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    </p>
-    <a class="readmore" href="#">readmore</a>
+
+  <div class="container">
+    <!-- Left Side: Image -->
+    <div class="left">
+      <h1>This is me!</h1>
+      <img src="Headshot (1).png" alt="Logo" />
+    </div>
+
+    <!-- Right Side: Collapsible Boxes -->
+    <div class="right">
+      <button class="collapsible">Experience</button>
+      <div class="content" hidden>
+        <li>KKCF Website Development Fellow</li>
+        <p>In this role I created a functional website!</p>
+        <li>LBUSD Tech Intern</li>
+        <p>I repaired technology across multiple high schools.</p>
+      </div>
+
+      <button class="collapsible">Interests</button>
+      <div class="content" hidden>
+        <li>Running</li>
+        <p>I have been running for a large portion of my life. It is integral to who I am.</p>
+        <li>Language Learning</li>
+        <p>In my free time I love to delve into the fascinating concepts of language</p>
+        <li>Supporting Others</li>
+        <p>With the new information I learn, I like to teach others my knowledge.</p>
+      </div>
+    </div>
   </div>
 
-  <!--the following code is of the news' image section-->
-  <div class="newsimage-carousel">
-  <img src="Screenshot (9).png" class="newsimage" alt="newsimage" height=100% width=100% >
+  <!-- Simplest collapsible script -->
+  <script>
+    document.querySelectorAll('.collapsible').forEach(btn =>
+      btn.onclick = () => btn.nextElementSibling.hidden = !btn.nextElementSibling.hidden
+    );
+  </script>
 
+  <style>
+    /* Basic reset */
+
+    body{
+      background-color: #D0CFC2;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Navbar container */
+    nav {
+      background-color: #A8A798;
+      padding: 10px 20px;
+    }
+
+    /* Navbar list */
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    /* Navbar links */
+    nav ul li a {
+      color: black;
+      text-decoration: none;
+      font-weight: bold;
+      font-family: cinzel decorative;
+    }
+
+    /* Hover effect */
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+
+
+    body {
+      margin: 0;
+      font-family: cinzel decorative;
+    }
+
+    .container {
+      display: flex;
+      height: 100vh;
+    }
+
+    .left,
+    .right {
+      width: 50%;
+      padding: 20px;
+    }
+
+    .left img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .collapsible {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 5px;
+      font-size: 16px;
+      text-align: left;
+      cursor: pointer;
+      background-color: #ddd;
+      border: none;
+      border-radius: 4px;
+    }
+
+    .content {
+      padding: 10px;
+      background-color: #f1f1f1;
+      border-radius: 4px;
+      margin-bottom: 10px;
+    }
+  </style>
+  
 </body>
 
 </html>
