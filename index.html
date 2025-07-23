@@ -30,12 +30,18 @@
 
     <!-- Right Side: Collapsible Boxes -->
     <div class="right">
-      <button class="collapsible">Experience</button>
+      <button class="collapsible">Goals & Experience(Skills)</button>
       <div class="content" hidden>
+        <h5>Skills</h5>
         <li>KKCF Website Development Fellow</li>
         <p>In this role I created a functional website!</p>
         <li>LBUSD Tech Intern</li>
         <p>I repaired technology across multiple high schools.</p>
+        <h5>Goals</h5>
+        <li>Code</li>
+        <p>I want to teach other kids how to code.</p>
+        <li>Language</li>
+        <p>I not only want to learn more human languages, but also coding langauges as well.</p>
       </div>
 
       <button class="collapsible">Interests</button>
@@ -50,7 +56,7 @@
     </div>
   </div>
 
-  <!-- Simplest collapsible script -->
+  <!--  collapsible script -->
   <script>
     document.querySelectorAll('.collapsible').forEach(btn =>
       btn.onclick = () => btn.nextElementSibling.hidden = !btn.nextElementSibling.hidden
@@ -58,7 +64,6 @@
   </script>
 
   <style>
-    /* Basic reset */
 
     body{
       background-color: #D0CFC2;
